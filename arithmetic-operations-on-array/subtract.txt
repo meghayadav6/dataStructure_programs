@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,j;
+	int rows1,cols1,rows2,cols2,rowsum,colsum;
+	int mat1[5][5],mat2[5][5],sub[5][5];
+	clrscr();
+	printf("\n enter the number of rows in first matrix: ");
+	scanf("%d",&rows1);
+	printf("\n enter the number of columns in the first matrix: ");
+	scanf("%d",&cols1);
+	printf("\n enter the number of rows in second matrix: ");
+	scanf("%d",&rows2);
+	printf("\n enter the number of columns in second matrix: ");
+	scanf("%d",&cols2);
+	printf("\n enter the elements of the first matrix: ");
+	rowsum=rows1;
+	colsum=cols1;
+	for(i=0;i<rows1;i++)
+	{
+		for(j=0;j<cols1;j++)
+		{
+			scanf("%d",&mat1[i][j]);
+		}
+	}
+	printf("\n enter the elements of the second matrix: ");
+	for(i=0;i<rows2;i++)
+	{
+		for(j=0;j<cols2;j++)
+		{
+			scanf("%d",&mat2[i][j]);
+		}
+	}
+	for(i=0;i<rowsum;i++)
+	{
+		for(j=0;j<colsum;j++)
+		{
+			sub[i][j]=mat1[i][j]-mat2[i][j];
+		}
+	}
+	printf("\n the elements of the resultant matrix are: ");
+	for(i=0;i<rowsum;i++)
+	{
+		printf("\n");
+		for(j=0;j<colsum;j++)
+		{
+			printf("%d\t",sub[i][j]);
+		}
+		printf("\n");
+	}
+getch();
+}
